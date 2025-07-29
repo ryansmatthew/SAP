@@ -2,6 +2,6 @@ curl -L --progress-bar -o SAP.zip "https://github.com/ryansmatthew/SAP/releases/
 
 powershell -Command "Expand-Archive -Path 'SAP.zip' -DestinationPath 'SAP' -Force"
 
-cd SAP\SAP\Setup\
+cd SAP\Win32\Setup\
 
 NwSapSetup.exe /Silent /Install /Product="SAPGUI"
