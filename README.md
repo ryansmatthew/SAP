@@ -1,7 +1,5 @@
-curl -L --progress-bar -o SAP.zip "https://github.com/ryansmatthew/SAP/releases/download/SAP8/SAP8.zip"
+curl -L --progress-bar -o SAP.zip "https://github.com/ryansmatthew/SAP/releases/download/SAP8/SAPGUI.exe"
 
-powershell -Command "Expand-Archive -Path 'SAP.zip' -DestinationPath 'SAP' -Force"
+Start-Process -FilePath "SAPGUI_20250805_1443.exe" -ArgumentList '/Silent /Package="SAPGUI"' -Wait
+Write-Output "Cài đặt đã hoàn tất!"
 
-cd SAP\Win32\Setup\
-
-NwSapSetup.exe /Silent /Install /Product="SAPGUI"
